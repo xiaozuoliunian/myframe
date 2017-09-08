@@ -1,0 +1,100 @@
+.head-img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.openMenu {
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+
+.dropdown.openMenu .dropdown-menuShow:after, .navbar.bg-primary .nav > li.dropdown .openMenu .dropdown-menuShow:after{
+    border-bottom-color: #fff;
+}
+
+.openMenu .dropdown-menuShow li:first-child{
+    border-top:none!important;
+}
+.openMenu .dropdown-menuShow li:last-child{
+    border-bottom:none!important;
+}
+.openMenu .dropdown-menuShow li a:hover{
+    color:#3498db;
+    background-color: #fff;
+}
+.dropdown-menuShow{
+    position: absolute;
+    top: 32px;
+    right: 0;
+    min-width:150px;
+    text-align:center;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+.dropdown a{
+    color:#666;
+}
+.dropdown-menuShow .list-group-item{
+	text-align:center;
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+}
+/* Υ�����������Ա���� */
+.file-common{
+	left: 17px;
+	top: 6px;
+	padding:2px 0;
+}
+.viewFile-iput{
+	opacity: 0;
+	width: 56px;
+	height: 29px;
+}
+.up-img{
+	width:90px;
+	height:90px;
+}
+/*
+研判用的图标*/
+@font-face {
+    font-family: 'IconSweets-Deluxe';
+    src:url('../../fonts/iconsweets/IconSweets-Deluxe.eot');
+    src:url('IconSweets-Deluxe.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/iconsweets/IconSweets-Deluxe.woff') format('woff'),
+    url('../../fonts/iconsweets/IconSweets-Deluxe.ttf') format('truetype'),
+    url('IconSweets-Deluxe.svg#IconSweets-Deluxe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icon-zoom2, .icon-zoom, .icon-youtube4, .icon-youtube3, .icon-youtube2, .icon-youtube, .icon-write, .icon-wordpress2, .icon-wordpress, .icon-winner-podium, .icon-windows, .icon-wifi4, .icon-wifi3, .icon-wifi2, .icon-wifi, .icon-walking-man, .icon-wacom2, .icon-wacom, .icon-visa2, .icon-visa, .icon-vimeo5, .icon-vimeo4, .icon-vimeo3, .icon-vimeo2, .icon-vimeo, .icon-vault, .icon-v-card3, .icon-v-card2, .icon-v-card, .icon-users2, .icon-users, .icon-user2, .icon-user, .icon-user-comment, .icon-usb-stick, .icon-upload, .icon-universal-access, .icon-under-construction, .icon-umbrella, .icon-twitter3, .icon-twitter2, .icon-twitter, .icon-tumblr, .icon-truck2, .icon-truck, .icon-trolly, .icon-tree, .icon-trashcan2, .icon-trashcan, .icon-traffic-light, .icon-tools, .icon-timer, .icon-text-styling3, .icon-text-styling2, .icon-text-styling, .icon-television, .icon-telephone4, .icon-telephone3, .icon-telephone2, .icon-telephone, .icon-tags2, .icon-tag, .icon-table-, .icon-sweater, .icon-suitcase3, .icon-suitcase2, .icon-suitcase, .icon-suitcase-travel, .icon-stumbleupon, .icon-strategy2, .icon-strategy, .icon-stopwatch, .icon-sticky-note, .icon-speech-bubbles2, .icon-speech-bubbles, .icon-speech-bubble2, .icon-speech-bubble, .icon-sound, .icon-socks, .icon-skype2, .icon-skype, .icon-signal, .icon-sign-post2, .icon-sign-post, .icon-shopping-cart4, .icon-shopping-cart3, .icon-shopping-cart2, .icon-shopping-cart, .icon-shopping-basket2, .icon-shopping-basket, .icon-shirt-tshirt, .icon-shirt-sport, .icon-shirt-sleeveless, .icon-shirt-nike, .icon-shirt-dress, .icon-shirt-adidas, .icon-shades, .icon-settings2, .icon-settings, .icon-sd3, .icon-sd2, .icon-sd, .icon-scissors, .icon-safari, .icon-running-man, .icon-ruler2, .icon-ruler, .icon-rss, .icon-robot, .icon-record, .icon-rake-scoop, .icon-radio, .icon-radio-signal, .icon-quicktime2, .icon-quicktime, .icon-printer, .icon-price-tags, .icon-price-tag, .icon-presentation, .icon-power, .icon-postcard, .icon-plixi, .icon-piggy-bank, .icon-phone-old, .icon-phone-hook, .icon-pencil, .icon-pen-fountain, .icon-paypal5, .icon-paypal4, .icon-paypal3, .icon-paypal2, .icon-paypal, .icon-paperclip, .icon-pants, .icon-pacman, .icon-pacman-ghost, .icon-outbox2, .icon-outbox, .icon-notebook, .icon-myspace2, .icon-myspace, .icon-musical-keyboard, .icon-mouse2, .icon-mouse, .icon-mouse-with-wire, .icon-monitor, .icon-money2, .icon-money, .icon-mobypicture, .icon-mobile-phone2, .icon-mobile-phone, .icon-mighty-mouse, .icon-mickey-mouse, .icon-mic, .icon-megaphone, .icon-medical-case, .icon-mastercard, .icon-marker, .icon-map, .icon-male, .icon-male-symbol, .icon-mail2, .icon-mail, .icon-magic-mouse, .icon-macos, .icon-locked, .icon-lock, .icon-lock-open, .icon-loading, .icon-list, .icon-list-with-images, .icon-list-with-image, .icon-linux, .icon-linked-in, .icon-link2, .icon-link, .icon-like2, .icon-like, .icon-light-bulb, .icon-lemon-stand2, .icon-lemon-stand, .icon-leaf, .icon-lastfm2, .icon-lastfm, .icon-laptop, .icon-lamps, .icon-labs, .icon-keyboard, .icon-key2, .icon-key, .icon-joomla, .icon-ipod-shuffle, .icon-ipod-nano2, .icon-ipod-nano, .icon-ipod-classic, .icon-iphone4, .icon-iphone4-with-4, .icon-iphone3g, .icon-ipad2, .icon-ipad, .icon-info, .icon-inbox3, .icon-inbox, .icon-images2, .icon-images, .icon-image2, .icon-image, .icon-imac, .icon-ideal, .icon-ichat, .icon-ice-cream2, .icon-ice-cream, .icon-hour-glass, .icon-home2, .icon-home, .icon-help, .icon-headphones, .icon-hd3, .icon-hd2, .icon-hd, .icon-harddisk, .icon-halloween, .icon-group2, .icon-group, .icon-gowalla2, .icon-gowalla, .icon-google-plus2, .icon-google-maps, .icon-google-buzz, .icon-globe2, .icon-globe, .icon-glass, .icon-glass-wine, .icon-g-key, .icon-full-screen3, .icon-full-screen2, .icon-full-screen, .icon-frames, .icon-foursquare, .icon-footprints, .icon-footprint, .icon-folder, .icon-folder-user, .icon-folder-music, .icon-folder-locked, .icon-flip-clock, .icon-flag2, .icon-flag, .icon-firefox, .icon-finish2, .icon-finish, .icon-film-strip2, .icon-film-strip, .icon-film-camera2, .icon-film-camera, .icon-file-cabinet, .icon-female, .icon-female-symbol, .icon-factory, .icon-facebook, .icon-eyedropper, .icon-eye, .icon-expression-engine, .icon-expose, .icon-exit, .icon-electricity-plug, .icon-electricity-input3, .icon-electricity-input2, .icon-electricity-input, .icon-dvd, .icon-drupal, .icon-dropbox, .icon-dribbble4, .icon-dribbble3, .icon-dribbble2, .icon-dribbble, .icon-download, .icon-download-to-pc, .icon-dog-tags, .icon-dog-tag, .icon-documents, .icon-documents-zip, .icon-documents-word, .icon-documents-text, .icon-documents-powerpoint, .icon-documents-pdf, .icon-documents-excel, .icon-document, .icon-document-zip, .icon-document-word, .icon-document-text, .icon-document-powerpoint, .icon-document-photo, .icon-document-pdf, .icon-document-excel, .icon-dinner-plate, .icon-digg4, .icon-digg3, .icon-digg2, .icon-digg, .icon-delicious, .icon-data-table, .icon-cup, .icon-creditcard, .icon-coverflow, .icon-contacts5, .icon-contacts4, .icon-contacts3, .icon-contacts2, .icon-contacts, .icon-cogs, .icon-cog4, .icon-cog3, .icon-cog2, .icon-cog, .icon-cloud, .icon-cloud-upload, .icon-cloud-rain-with-thunder, .icon-cloud-rain-with-thunder-and-snow, .icon-cloud-rain-with-sun, .icon-cloud-rain-with-shiny-sun, .icon-cloud-download, .icon-clock2, .icon-clock, .icon-clipboard, .icon-clapboard, .icon-chrome, .icon-chart-pie, .icon-chart-pie-85, .icon-chart-pie-75, .icon-chart-pie-65, .icon-chart-pie-50, .icon-chart-pie-35, .icon-chart-pie-25, .icon-chart-pie-10, .icon-chart-graph2, .icon-chart-graph, .icon-chair, .icon-cd, .icon-cat, .icon-cash-register2, .icon-casette, .icon-car, .icon-candy-cane, .icon-camera2, .icon-camera, .icon-calendar-strike, .icon-calendar-month, .icon-calendar-day, .icon-calculator, .icon-bullseye, .icon-building, .icon-brush-small, .icon-brush-paint, .icon-brush-big, .icon-box-incoming, .icon-books2, .icon-books, .icon-book, .icon-book-large, .icon-bluray, .icon-bluetooth2, .icon-bluetooth, .icon-blocks, .icon-blackberry3, .icon-blackberry2, .icon-blackberry, .icon-bills, .icon-battery, .icon-battery-full, .icon-battery-empty, .icon-battery-70, .icon-battery-20, .icon-barcode3, .icon-barcode2, .icon-barcode, .icon-bandaid, .icon-balloons, .icon-bag2, .icon-bag, .icon-bag-shopping, .icon-bag-recycle, .icon-bag-lady, .icon-arrow-up, .icon-arrow-shuffle, .icon-arrow-right, .icon-arrow-repeat, .icon-arrow-refresh4, .icon-arrow-refresh3, .icon-arrow-refresh2, .icon-arrow-refresh, .icon-arrow-recycle, .icon-arrow-left, .icon-arrow-down, .icon-archive, .icon-applications, .icon-android2, .icon-android, .icon-american-express, .icon-alert2, .icon-alert, .icon-alarm2, .icon-alarm, .icon-alarm-clock, .icon-airplane, .icon-admin2, .icon-admin, .icon-acd, .icon-access-denied, .icon-abacus{
+    font-family: 'IconSweets-Deluxe';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-tools:before {
+    content: "\e032";
+}
+.tableClass.fixed-table-body {
+	    overflow-x:inherit!important;
+    overflow-y: inherit!important;
+}

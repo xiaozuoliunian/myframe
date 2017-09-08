@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <description>Shiro Configuration</description>
+
+    <!-- 1. 配置安全管理器  -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--<property name="sessionManager" value="native"/>-->
+        <!--<property name="cacheManager" ref="cacheManager"/>-->
+        <property name="realm" ref="myRealm"/>
+    </bean>
+
+    <!-- 2. 配置CacheManager -->
+  <!--  <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache.properties"/>
+    </bean>-->
+
+    <!-- 3. 配置Realm,密码加密认证 -->
+    <bean id="myRealm" class="com.veuve.ssm.common.shiro.ShiroRealm">
+        <property name="credentialsMatcher">
+            <bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+                <property name="hashAlgorithmName" value="MD5"/>
+                <property name="hashIterations" value="1024"/>
+                <property name="storedCredentialsHexEncoded" value="true"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- 4. 配置LifecycleBeanPostProcessor,可以自定义来调用配置在Spring IOC容器中的Shiro Bean生命周期-->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!-- 5. 启用IOC容器中使用shiro的注解，但必须在配置了LifecycleBeanPostProcessor之后才可以使用 -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor"/>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+    <!-- 6. 配置ShiroFilter,id必须和web.xml中的DelegatingFilterProxy中的相同 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login"/>
+        <property name="successUrl" value="/main"/>
+        <property name="unauthorizedUrl" value="/unauthorized"/>
+        <property name="filterChainDefinitions">
+            <value>
+                /login = anon
+                /shiroLogin = anon
+                /shiroLoginOut = logout
+
+                /resources/** = anon
+                #everything else requires authentication:
+                /** = authc
+            </value>
+        </property>
+    </bean>
+
+    <!-- 定义需要的Service层 -->
+    <bean id="userManagerService" class="com.veuve.ssm.service.impl.UserManagerServiceImpl"/>
+
+</beans>

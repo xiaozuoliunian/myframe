@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<!-- 1.namespace：必须与对应的接口全类名一致   2.id:必须与对应接口的某个对应的方法名一致--> 
+
+<mapper namespace="com.veuve.ssm.dao.system.ITbMenuDao">
+    <select id="findMenuList" resultType="com.veuve.ssm.model.system.Menu" parameterType="map">
+        select id,menu_title,menu_url,menu_icon,create_date
+        from sys_menu
+        where 1 = 1
+        and del = '0'
+    </select>
+
+    <select id="findMenuListAll" resultType="com.veuve.ssm.model.system.Menu">
+        select id,menu_title,menu_url,menu_icon,create_date
+        from sys_menu
+        where 1 = 1
+        and del = '0'
+    </select>
+
+    <update id="deleteMenuById" parameterType="string">
+        update sys_menu set del = '1' where id = #{id} and del = '0'
+    </update>
+
+    <insert id="saveMenuInfo" parameterType="com.veuve.ssm.model.system.Menu">
+        insert into sys_menu (
+           id,
+           menu_title,
+           menu_url,
+           menu_icon,
+           create_date,
+           del
+        )values(
+          #{id},
+          #{menuTitle},
+          #{menuUrl},
+          #{menuIcon},
+          #{createDate},
+          '0'
+        )
+    </insert>
+
+    <update id="updateMenuInfo" parameterType="com.veuve.ssm.model.system.Menu">
+        update sys_menu set
+        menu_title = #{menuTitle},
+        menu_url = #{menuUrl},
+        menu_icon = #{menuIcon},
+        create_date = #{createDate},
+        del = '0'
+        where id = #{id}
+    </update>
+
+    <select id="findMenuById" parameterType="String" resultType="com.veuve.ssm.model.system.Menu">
+        select id,menu_title,menu_url,menu_icon,create_date from sys_menu where id = #{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,104 @@
+/*下拉展开按钮的样式*/
+.btn-updown{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -73px;
+    cursor:pointer;
+}
+#pageContent .panel-body{
+    margin-bottom: 30px;
+}
+.fixedHig{
+    height: 78px;
+    overflow: hidden;
+}
+.btn-updown i{ 
+    background:url(../../../image/icon.png) no-repeat;
+    display: block;
+    width:10px;
+    height:10px;
+    position: absolute;
+    left: 71px;
+    bottom: 2px;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+}
+.btn-updown i.down{
+    background-position:-3px -4px;
+}
+/*.btn-updown:hover i.down{*/
+    /*-webkit-transform: rotate(360deg); */
+    /*-moz-transform: rotate(360deg); */
+    /*transform: rotate(360deg); */
+/*} */
+.btn-updown i.up{
+    background-position:-3px -16px;
+}   
+/*.btn-updown:hover i.up{*/
+    /*background-position:-3px -16px; */
+    /*-webkit-transform: rotate(360deg); */
+    /*-moz-transform: rotate(360deg); */
+    /*transform: rotate(360deg); */
+/*} */
+.ellipsis-table{
+    table-layout:fixed
+}
+.ellipsis-element{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+
+
+#caseDetail label.control-label {
+    color: #888;
+}
+#caseDetail .val-color{
+    color:#666;
+}
+/*.multi-ellipsis2{*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 2;*/
+    /*-webkit-box-orient: vertical;*/
+/*}*/
+/*#caseDetail .fa-plus,#caseDetail .fa-minus{*/
+    /*position: absolute;*/
+    /*top: 4px;*/
+    /*right: 5px;*/
+    /*text-decoration: none;*/
+/*}*/
+.btn-group-horizon{
+    display: inline-block;
+}
+.icon-btn .badge {
+    top: 5px!important;
+    right: 6px!important;
+}
+.badge {
+    padding: 2px 4px!important;
+}
+#caseDetail .btn{
+    padding: 0 2px;
+}
+.panel-heading .panel-tabs.panel-tabs-border > li.active > a {
+    background: #fff!important;
+    color: #666!important;
+    border-bottom: none!important;
+    border-top: 2px solid #3498db;
+}
+#case-detail-jyaq {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

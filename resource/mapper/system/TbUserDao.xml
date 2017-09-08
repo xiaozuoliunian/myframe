@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<!-- 1.namespace：必须与对应的接口全类名一致   2.id:必须与对应接口的某个对应的方法名一致--> 
+
+<mapper namespace="com.veuve.ssm.dao.system.ITbUserDao">
+    <select id="findUserList" resultType="com.veuve.ssm.model.system.User" parameterType="map">
+        select id,username,password,true_name,card_id,create_date
+        from sys_user
+        where 1 = 1
+        and del = '0'
+        <if test="username != null and username != ''">
+          and username = #{username}
+        </if>
+        <if test="trueName != null and trueName != ''">
+            and true_name like ('%${trueName}%')
+        </if>
+        <if test="cardId != null and cardId != ''">
+            and card_id like  ('%${cardId}%')
+        </if>
+    </select>
+
+    <select id="findUserByUsername" parameterType="String" resultType="com.veuve.ssm.model.system.User">
+        select id,username,password,true_name,card_id,create_date from sys_user where username = #{username} and del = '0'
+    </select>
+
+    <update id="deleteUserById" parameterType="string">
+        update sys_user set del = '1' where id = #{id} and del = '0'
+    </update>
+
+    <insert id="saveUserInfo" parameterType="com.veuve.ssm.model.system.User">
+        insert into sys_user (
+           id,
+           username,
+           true_name,
+           password,
+           card_id,
+           create_date,
+           del
+        )values(
+          #{id},
+          #{userName},
+          #{trueName},
+          #{password},
+          #{cardId},
+          #{createDate},
+          '0'
+        )
+    </insert>
+
+    <update id="updateUserInfo" parameterType="com.veuve.ssm.model.system.User">
+        update sys_user set
+        username = #{userName},
+        true_name = #{trueName},
+        password = #{password},
+        card_id = #{cardId},
+        create_date = #{createDate},
+        del = '0'
+        where id = #{id}
+    </update>
+
+    <select id="findUserByUserId" parameterType="String" resultType="com.veuve.ssm.model.system.User">
+        select id,username,password,true_name,card_id,create_date from sys_user where id = #{id}
+    </select>
+
+</mapper>

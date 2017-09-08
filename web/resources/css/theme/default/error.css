@@ -1,0 +1,51 @@
+.fullpercen{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background-color: #eee;
+}
+.content-content {
+	width: 100%;
+    height: 100%;
+}
+.contimg{
+	position: absolute;
+    left: 50%;
+    margin-left: -17%;
+    top: 15%;    
+    width: 34%;
+    height: 68%;
+
+}
+.popfont{
+	width:600px;
+}
+.imgbg{
+	width: 100%;
+    height: 60%;
+    position: relative;
+}
+.imgbg,.fontbg{
+	background-color: #fff;
+}
+.footer{
+	position: absolute;
+    left: 50%;
+    margin-left: -275px;
+    bottom: 5%;
+}
+.sign-img{
+	top:50%;
+	margin-top:-22.5px;
+}
+.right-font{
+	margin-left:55px;
+}
+a:hover{
+    color: #fff!important;
+    text-decoration: none!important;
+}
+/*.content-content{
+    background: url(images/threeError.jpg) no-repeat center;
+    background-size:100% 100%;
+}*/

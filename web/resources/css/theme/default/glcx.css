@@ -1,0 +1,44 @@
+/*下拉展开按钮的样式*/
+.btn-updown{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -73px;
+    cursor:pointer;
+}
+#pageContent .panel-body{
+    margin-bottom: 30px;
+}
+.fixedHig{
+    height: 78px;
+    overflow: hidden;
+}
+.btn-updown i{
+    background:url(../../../image/icon.png) no-repeat;
+    display: block;
+    width:10px;
+    height:10px;
+    position: absolute;
+    left: 71px;
+    bottom: 2px;
+    -webkit-transition: -webkit-transform 0.4s ease-out; 
+    -moz-transition: -moz-transform 0.4s ease-out; 
+    transition: transform 0.4s ease-out;
+}
+.btn-updown i.down{
+    background-position:-3px -4px;
+}
+.btn-updown:hover i.down{
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg); 
+    transform: rotate(360deg); 
+} 
+.btn-updown i.up{
+    background-position:-3px -16px;
+}   
+.btn-updown:hover i.up{
+    background-position:-3px -16px; 
+    -webkit-transform: rotate(360deg); 
+    -moz-transform: rotate(360deg); 
+    transform: rotate(360deg); 
+} 

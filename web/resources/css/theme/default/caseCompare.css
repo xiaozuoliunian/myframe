@@ -1,0 +1,48 @@
+.main {
+    position: relative;
+    width: 120px;  height: 90px;
+    margin:auto;
+}
+.myslide {
+    float: left;  position: absolute;  overflow: hidden;
+    width: 120px;  height: 90px;
+}
+.myslidetwo {
+    position: absolute;
+    overflow: hidden;
+    width: 2000px;
+    padding:0;
+}
+.myslidetwo img {
+    float: left;  width: 120px;  height: 90px;
+}
+a.pre,a.next{
+    display: inline-block;
+    width:30px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor:pointer;
+    text-decoration: none;
+    font-size: 38px;
+}
+a.pre{
+    position: absolute;
+    left:5px;
+    top:50%;
+}
+a.next{
+    position: absolute;
+    right:5px;
+    top:50%;
+}
+.choose-checkbox{
+    position: absolute;
+    left: -30px;
+    top: 16px;
+} /* 滑块颜色 */
+.right-triangle{
+    position: absolute;
+    right: -6px;
+    top: 3px;
+}

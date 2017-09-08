@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*时间轴*/
+#timeline.timeline-single {
+    margin-left: 117px;
+}
+.timeline-icon p.timeSet{
+    position: ABSOLUTE;
+    left: -96px;
+    width: 100px;
+}
+.posi{
+  position: inherit!important;
+}
+#timeline.timeline-single{
+    max-width:100%;
+}
+/*左侧导航*/
+.tray-left .panel-tabs{
+    position: inherit;
+}
+.panel-tabs-left > li.active:last-child > a{
+    border-right:none;
+}
+.tray-left .panel-tabs > li{
+    width:124px;
+    text-align: center;
+}
+/*时间轴上的小三角图标*/
+#timeline .panel:before, #timeline .panel:after{
+    content: initial;
+}

@@ -1,0 +1,79 @@
+@charset "utf-8";
+ul li{
+	list-style-type: none;
+}
+.clear-bh{
+	clear: both;
+}
+
+/*已选项*/
+.choosed .choosed-ul .choosed-li .close-choosed{
+	top: 7px;
+    right: 3px;
+	cursor: pointer;
+}
+/*树结构*/
+.treeSearch{
+	min-height:300px;
+}
+.treeSearch .list-group-item{
+	border: none;
+}
+.treeSearch .list-group-item > .badge{
+	float: inherit;
+}
+.treeSearch .list-group-item .badge{
+	margin-left:1.5em;
+ 	width:500px;
+	border:none;
+	color:#999;
+	border-radius:0px;
+	background-color: inherit;
+	font-size: 12px;
+	font-weight: normal;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	-webkit-text-overflow:ellipsis;
+	position: absolute;
+	font-family: 宋体;
+	text-align: left;
+}
+.treeSearch .list-group-item .tooltip{
+	z-index:9999999;
+	border-radius: 3px;
+	box-shadow: -3px 0 4px #ddd,
+	1px 0 3px #ddd, 
+	0 -3px 2px #ddd,
+	0 7px 1px #ddd;
+}
+.treeSearch .list-group-item .tooltip.top{
+	top: 39px!important; 
+}
+ .treeSearch .list-group-item .tooltip-inner{
+	max-width: 300px;
+	background-color:#fff;
+	color:#666;
+}
+.treeSearch .list-group-item .tooltip.top .tooltip-arrow{
+	top: -10px;
+	border-width: 0px 11px 11px;
+	border-bottom-color: #fff;
+	bottom: inherit;
+}
+.treeSearch .list-group-item{
+	padding-left: 0;
+	height:30px!important;
+}
+ul#formmenu li{
+	width:138px;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+	    width: 750px;
+	    margin: 20px auto;
+	}
+}
+
+
+

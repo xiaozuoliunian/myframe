@@ -1,0 +1,114 @@
+.close-tab {
+    font-size: 10px;
+    position:absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 100;
+    cursor: hand;
+    cursor: pointer;
+    color:#eee;
+}
+
+.topbar-collapse {
+    float:right;
+}
+.tabdrop li{
+    position:relative;
+}
+.content-tab{
+    width:10000px;
+    margin-left:40px;
+}
+.common-Btn{
+    width: 40px;
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    border: solid 1px #eee;
+    height: 50px;
+}
+.pre-Btn{    
+    left: 0;
+}
+.pre-Btn:hover,.next-Btn:hover{
+    background-color:#eee;
+}
+.next-Btn{
+    right: 80px;
+}
+.roll-nav{
+    position:absolute;
+    right:0;
+    height: 50px;
+}
+.J_tabClose{
+    border: none;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    height: 100%;
+    width:80px;
+}
+.content-tabs{
+position: relative;
+height: 40px;
+background: #fafafa;
+line-height: 39px;
+border-bottom:1px solid #eee;
+}
+.nav-tabs{
+    background: #eee;
+    margin-left:40px;
+}
+.page-tabs-content .J_menuTab{
+    background-color: #fff; 
+    padding: 0px 26px;
+    border-right:1px solid #eee;
+    float:left;
+}
+.tabcommon{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    text-align: center;
+    border: none;
+    border: 1px solid #eee;
+    background-color: #fff;
+    height: 100%;
+    line-height: 40px;
+}
+.J_tabLeft{
+    left: 0;
+}
+.J_tabRight{
+    right:80px!important;
+    width:40px!important;
+}
+.all-btn{
+    position: absolute;
+    right:0px;
+    top:0;
+    height: 100%;
+
+}
+.J_tabLeft:hover{
+    background-color:#eee;
+}
+.J_menuTabs{
+    margin-left: 40px;
+    width: 100000px;
+    overflow: hidden;
+}
+.page-tabs-content{
+    float:left;
+}
+.page-tabs-content  .active{
+    background: #2f4050;
+    color: #a7b1c2;
+}
+.page-tabs-content .J_menuTab:hover{
+   
+    text-decoration:none;
+}
+.dropdown-menu-right a{
+    cursor: pointer;
+}

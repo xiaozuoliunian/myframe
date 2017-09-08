@@ -1,0 +1,41 @@
+.lx-style {
+  margin-top: 10px!important;
+}
+.bottom-excl {
+  position: relative;
+  background-color: #eee;
+  padding: 7px 0 7px 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+}
+.bottom-excl .file.append-button {
+  position: absolute;
+  right: 13px;
+  bottom: -26px;
+}
+.bottom-excl .file.append-button #file1 {
+  max-width: 30px;
+  height: 30px;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  opacity: 0;
+  position: absolute;
+  right: -12px;
+  bottom: 24px;
+  z-index: 999;
+}
+.bottom-excl .file.append-button label.field-icon i {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  right: -12px;
+  bottom: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+.bottom-excl .file.append-button label.field-icon:hover i {
+  color: #3498db;
+}

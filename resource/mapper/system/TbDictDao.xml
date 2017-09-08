@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 1.namespace：必须与对应的接口全类名一致   2.id:必须与对应接口的某个对应的方法名一致-->
+
+<mapper namespace="com.veuve.ssm.dao.system.ITbDictDao">
+
+    <insert id="saveDictInfo" parameterType="com.veuve.ssm.model.system.Dict">
+        insert into sys_dict (
+        id,
+        dict_key,
+        parent_key,
+        root_key,
+        dict_value,
+        dict_sort,
+        dict_level,
+        del,
+        create_date
+        )values(
+        #{id},
+        #{dictKey},
+        #{parentKey},
+        #{rootKey},
+        #{dictValue},
+        #{dictSort},
+        #{dictLevel},
+         '0',
+        #{createDate}
+        )
+    </insert>
+
+    <select id="findDictList" resultType="com.veuve.ssm.model.system.Dict" parameterType="map">
+        select id,dict_key,parent_key,root_key,dict_value,dict_level,dict_sort,create_date
+        from sys_dict
+        where 1 = 1
+        and del = '0'
+        <if test="dictKey != null and dictKey != ''">
+            and dict_key like ('%${dictKey}%')
+        </if>
+        <if test="parentKey != null and parentKey != ''">
+            and parent_key like ('%${parentKey}%')
+        </if>
+        <if test="rootKey != null and rootKey != ''">
+            and root_key like  ('%${rootKey}%')
+        </if>
+        <if test="dictValue != null and dictValue != ''">
+            and dict_value like  ('%${dictValue}%')
+        </if>
+    </select>
+
+    <select id="findDictByDictValue" parameterType="String" resultType="com.veuve.ssm.model.system.Dict">
+        select id,dict_key,parent_key,root_key,dict_value,dict_level,dict_sort,create_date from sys_dict where dict_value = #{dictValue} and del = '0'
+    </select>
+
+    <update id="deleteDictById" parameterType="string">
+        update sys_dict set del = '1' where id = #{id} and del = '0'
+    </update>
+
+    <update id="updateDictInfo" parameterType="com.veuve.ssm.model.system.Dict">
+        update sys_dict set
+        dict_key = #{dictKey},
+        parent_key = #{parentKey},
+        root_key = #{rootKey},
+        dict_value = #{dictValue},
+        dict_sort = #{dictSort},
+        dict_level = #{dictLevel},
+        del = '0'
+        where id = #{id}
+    </update>
+
+    <select id="findDictById" parameterType="String" resultType="com.veuve.ssm.model.system.Dict">
+        select id,dict_key,parent_key,root_key,dict_value,dict_level,dict_sort,create_date from sys_dict where id = #{id}
+    </select>
+
+</mapper>
